@@ -54,5 +54,10 @@ public boolean existsById(Integer id) {
     return content.stream().anyMatch(c -> c.id().equals(id));
 }
 
+public void deleteById(Integer id) {
+    content.removeIf(c -> c.id().equals(id));
 }
+
+}
+
 
